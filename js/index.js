@@ -69,7 +69,8 @@ navcontent6.textContent = siteContent.nav["nav-item-6"]
 
 //top content
 let h1 = document.querySelector("h1");
-h1.textContent = siteContent.cta.h1
+h1.setAttribute('style', 'white-space: pre;');
+h1.textContent = "DOM\r\nIs\r\nAwesome"
 
 let button = document.querySelector("button");
 button.textContent = siteContent.cta.button
@@ -140,8 +141,9 @@ createanchor.textContent ='Learn more'
 createanchor.href ='https://www.w3schools.com/js/js_htmldom.asp';
 createanchor.setAtrribute('id','firstLink')
 
-let parent = document.querySelector("nav");
-let p = document.createElement("a");
-parent.prepend("Some text", p);
+let newItem = document.createElement("h1");       // Create a <li> node
+let textnode = document.createTextNode("Water");  // Create a text node
+newItem.appendChild(textnode);                    // Append the text to <li>
 
-
+let list = document.querySelector(".cta-text");    // Get the <ul> element to insert a new node
+list.insertBefore(newItem, list.childNodes[0]);
