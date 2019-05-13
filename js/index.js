@@ -143,6 +143,10 @@ createanchor.setAtrribute('id','firstLink')
 
 let newItem = document.createElement("a");  
    
-let parent = document.querySelector('header')
-parent.prepend("hello", newItem)
-newItem.setAtrribute('id','secondLink')
+let parent = document.querySelector('nav')
+newItem.textContent = "hello"
+newItem.href = "https://google.com"
+newItem.setAttribute("id", "secondlink")
+parent.prepend(newItem)
+
+
