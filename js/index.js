@@ -50,7 +50,7 @@ secondimage.setAttribute("src", "img/mid-page-accent.jpg");
 
 //navbar
 let navcontent = document.querySelector("nav a");
-navcontent.textContent = "Services";
+navcontent.textContent = siteContent.nav["nav-item-1"];
 
 let navcontent2 = document.querySelector("nav a:nth-of-type(2)")
 navcontent2.textContent = "Product";
@@ -124,3 +124,24 @@ paragraph3.textContent = "sales@greatidea.io"
 //footer
 let footer = document.querySelector("footer")
 footer.textContent = "Copyright Great Idea! 2018"
+
+
+
+
+let anchor = document.querySelectorAll("a");
+anchor.forEach(element => {
+  element.style.color = "green"
+})
+
+//task 3
+let createanchor = document.createElement('a') 
+document.querySelector('nav').appendChild(createanchor)
+createanchor.textContent ='Learn more' 
+createanchor.href ='https://www.w3schools.com/js/js_htmldom.asp';
+createanchor.setAtrribute('id','firstLink')
+
+let parent = document.querySelector("nav");
+let p = document.createElement("a");
+parent.prepend("Some text", p);
+
+
