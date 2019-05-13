@@ -141,9 +141,8 @@ createanchor.textContent ='Learn more'
 createanchor.href ='https://www.w3schools.com/js/js_htmldom.asp';
 createanchor.setAtrribute('id','firstLink')
 
-let newItem = document.createElement("h1");       // Create a <li> node
-let textnode = document.createTextNode("Water");  // Create a text node
-newItem.appendChild(textnode);                    // Append the text to <li>
-
-let list = document.querySelector(".cta-text");    // Get the <ul> element to insert a new node
-list.insertBefore(newItem, list.childNodes[0]);
+let newItem = document.createElement("a");  
+   
+let parent = document.querySelector('header')
+parent.prepend("hello", newItem)
+newItem.setAtrribute('id','secondLink')
